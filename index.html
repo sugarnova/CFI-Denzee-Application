@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Add your meta and title -->
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <button id="favorites-button" onclick="openFavoritesPage()">
+      Favorites
+    </button>
+    <div class="cards">
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">Click to flip for a joke or quote.</div>
+          <div class="card-back">
+            <div class="content">
+              <!-- Content goes here -->
+            </div>
+            <button class="like-button" onclick="playAudio()">Like</button>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">Click to flip for a joke or quote.</div>
+          <div class="card-back">
+            <div class="content">
+              <!-- Content goes here -->
+            </div>
+            <button class="like-button" onclick="playAudio()">Like</button>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">Click to flip for a joke or quote.</div>
+          <div class="card-back">
+            <div class="content">
+              <!-- Content goes here -->
+            </div>
+            <button class="like-button" onclick="playAudio()">Like</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+
+    <audio id="alert-sound" autoplay controls="false">
+      <source src="./mouse-click.mp3" type="audio/mp3" />
+      Your browser does not support the audio element.
+    </audio>
+  </body>
+</html>

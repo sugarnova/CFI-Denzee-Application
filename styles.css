@@ -1,0 +1,102 @@
+.cards {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Add this CSS for the Favorites button */
+#favorites-button {
+    background-color: #ffcc00; /* Set the background color */
+    color: #000; /* Set the text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 10px; /* Add margin for spacing */
+}
+
+
+.card {
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px; /* Add margin to create space between cards */
+    cursor: pointer;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+.card .card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.card .card-inner.flipped {
+    transform: rotateY(180deg);
+}
+
+.card .card-front,
+.card .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transform-origin: center;
+}
+
+.card .card-front {
+    transform: rotateY(0deg);
+    background: rgb(126, 191, 244);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-family: Roboto;
+    padding: 20px;
+}
+
+.card .card-back {
+    transform: rotateY(180deg);
+    background: #E91E63;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.card .card-back .content {
+    margin-bottom: 10px;
+}
+
+.card .card-back .like-button {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.card.liked .like-button {
+    background-color: #00ff00;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
